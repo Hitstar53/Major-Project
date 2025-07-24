@@ -32,10 +32,10 @@ def transliterate_to_devanagari(word):
     return transliterated_word
 
 def translate_to_english(sentence):
-    print(sentence)
+    # print(sentence)
     translator = Translator(from_lang="hi",to_lang="en")
     translation = translator.translate(sentence)
-    print(translation)
+    # print(translation)
     return translation
 
 def translate_hinglish_2(sentences):
@@ -76,79 +76,84 @@ def translate_hinglish_2(sentences):
         translated_sentences.append(translated_sentence)
 
     return translated_sentences
+
 hindi_dictionary = {
-    'bukhar':'fever',
-    'khansi': 'Cough',
-    'daura': 'Attack',
-    'kaf': 'Phlegm',
-    'tanav': 'Stress',
-    'krodh': 'Anger',
-    'bhay': 'Fear',
-    'jukam': 'Cold',
-    'najla': 'Runny nose',
-    'jalan': 'Burning sensation',
-    'allergy': 'Allergy',
-    'gard': 'Filth',
-    'gandagi': 'Dirtiness',
-    'sardi': 'Cold',
-    'flu': 'Flu',
-    'garam': 'fever',
-    'thandi': 'cold',
-    'pyaas': 'Thirst',
-    'jakhm': 'Wound',
-    'sankraman': 'Infection',
-    'thakan': 'Fatigue',
-    'jodo': 'joints',
-    'dard': 'Pain',
-    'sir': 'Head',
-    'sar' : 'Head',
-    'cheenkne': 'Sneezing',
-    'gala': 'throat',
-    'kharaab':'bad',
-    'laali': 'Redness',
-    'laal':'Redness',
-    'aankh':'eye',
-    'khujli': 'Itching',
-    'naak': 'nose',
-    'tootne': 'Breaking',
-    'thanda': 'Cold',
-    'chehra': 'face',
-    'pet': 'Stomach',
-    'saans': 'Breath',
-    'chaati': 'Chest',
-    'ulti': 'Vomiting',
-    'dakar': 'Burping',
-    'matli': 'Nausea',
-    'bechaini': 'Restlessness',
-    'jalan':'burning',
-    'chaati':'chest',
-    'seena':'chest',
+    "bukhar": "fever",
+    "khansi": "Cough",
+    "daura": "Attack",
+    "kaf": "Phlegm",
+    "tanav": "Stress",
+    "krodh": "Anger",
+    "bhay": "Fear",
+    "jukam": "Cold",
+    "najla": "Runny nose",
+    "jalan": "Burning sensation",
+    "gard": "Filth",
+    "gandagi": "Dirtiness",
+    "sardi": "Cold",
+    "flu": "Flu",
+    "garam": "fever",
+    "thandi": "cold",
+    "pyaas": "Thirst",
+    "jakhm": "Wound",
+    "sankraman": "Infection",
+    "thakan": "Fatigue",
+    "jodo": "joints",
+    "dard": "Pain",
+    "sir": "Head",
+    "sar": "Head",
+    "cheenkne": "Sneezing",
+    "gala": "throat",
+    "kharaab": "bad",
+    "laali": "Redness",
+    "laal": "Redness",
+    "aankh": "eye",
+    "khujli": "Itching",
+    "naak": "nose",
+    "tootne": "Breaking",
+    "thanda": "Cold",
+    "chehra": "face",
+    "pet": "Stomach",
+    "saans": "Breath",
+    "chaati": "Chest",
+    "ulti": "Vomiting",
+    "dakar": "Burping",
+    "matli": "Nausea",
+    "bechaini": "Restlessness",
+    "jalan": "burning",
+    "chaati": "chest",
+    "seena": "chest",
+    "dane": "spots",
+    "sharir": "body",
+    "chhikh": "sneezing",
+    "thakaan": "tiredness",
+    "bhaari": "heavy",
 }
 
 
 def process_text(text):
-  translated_text = translate_hinglish_2([text])[0]
-  ner_output = ApiConfig.pipe(translated_text)
-  print(ner_output)
-  symptoms = []
-  biological_structure = None
-  combined_symptoms = []
-  for entity in ner_output:
-      if entity['entity_group'] == 'Biological_structure':
-          biological_structure = entity['word']
-      elif entity['entity_group'] == 'Sign_symptom':
-          symptom = entity['word']
-          if biological_structure:
-              symptoms.append(f'"{biological_structure} {symptom}"')
-              biological_structure = None
-          else:
-              symptoms.append(f'"{symptom}"')
+    translated_text = translate_hinglish_2([text])[0]
+    #   ner_output = ApiConfig.pipe(translated_text)
+    #   print(ner_output)
+    #   symptoms = []
+    #   biological_structure = None
+    #   combined_symptoms = []
+    #   for entity in ner_output:
+    #       if entity['entity_group'] == 'Biological_structure':
+    #           biological_structure = entity['word']
+    #       elif entity['entity_group'] == 'Sign_symptom':
+    #           symptom = entity['word']
+    #           if biological_structure:
+    #               symptoms.append(f'"{biological_structure} {symptom}"')
+    #               biological_structure = None
+    #           else:
+    #               symptoms.append(f'"{symptom}"')
 
-  # Join symptoms into a single string
-  symptoms_str = ', '.join(symptoms)
-  print(symptoms_str)
-  diagnosis = ApiConfig.pipe_diagnosis(symptoms_str)
-  return diagnosis[0][0]['label'],translated_text
+    #   # Join symptoms into a single string
+    #   symptoms_str = ', '.join(symptoms)
+    #   print(symptoms_str)
+    diagnosis = ApiConfig.pipe_diagnosis(translated_text)
+    return diagnosis[0][0]["label"]+" or " + diagnosis[0][1]["label"]+" or "+diagnosis[0][2]["label"], translated_text
 
 # 3. API for Symptom Diagnosis (Top 3 Probabilities)
 @api_view(["POST"])

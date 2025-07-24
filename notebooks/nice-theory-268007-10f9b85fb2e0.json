@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "nice-theory-268007",
+  "private_key_id": "10f9b85fb2e0204f4061531e4ce26f3b1d16f418",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDAynjfw7kMKCLf\n8OaJPO2Y0J3gpE3wB4ZubKOYcOqzoESImNVr1keu9tGQ4rePtgP0PFtgHj/KDlSJ\nN4Y/T3iJYzu9iaiA49tiJZ96cTmi5c9oGV0QaiLEkfECdxILj3yP2HRYuFkMa8xw\ntGWjEClFqsI9unPgJEwmmyn8r23hOFmPcMMacfKg7l0k94zFnKTSvWWJAhLCx8SX\nBoGXsjKqyT9zmKjIcMKvc2mk1WBoTF0kcL8zYLjmFHl2LnXTXi/LP2bPYlrpD143\nhLtQxiMvEZgTgwM+GbjeY632MyrHm04jKHtd1HoOGaMu1Akwvb1Yh+TTEXlYCG0c\nndKCRfWBAgMBAAECggEAAkixx/WcOtPLxjk2+3as+krEKIzswhJ+QA8WHPJvQuCT\n6EX+fwcWUUEp/lpTvjJz63oGs3nHQ98hpvChHN1VwFOsSbqEjC6a3vfC8vD+A7cv\nEuC8S6tEuT1BAJhhVrEI8tWvuux37FnndZk7BCSPFxzazU8488WNUAal/6kCw1SN\ntkZ8BqzJ/eQIwouV+s3XgC/awTmkZpDv1L9nCQnS7hG6TaKhZ7YIhqbOx+ENoR5y\noZwPb2cBWv7CdYtio+lWo8jOMWDvhhhR6xfmPZ98tbrpJgNd351AB+Y2rGboZuFE\np43+Q9v/4SK6fkV9q76RRwnRSsVDnt4vl3HRt6eIgQKBgQDea8iKRBbWJUtQPu0E\nHdq/+pUoB+/mQ3qVToMsLkhTHm3xALvysSxj6DCTMdKflmxbj9fkuj/nf0VIjiIm\no1konkMeEFEkq2J1areH5Ge845CI8zeE4UzLgaLQ5rHE/uwVqWyod/pvN8ttjFiv\n1Q/HeljNOw27wt62AUzrQRjoQQKBgQDd5Ygzglj0TOPSisdqmA0iqyK/NC0Y/DJr\nDpxR6usAbAXI9z9owCsEQnUnO198QKWySJA5f2G1khbEPpRx9UN7y7l91+ii7S50\nqZ9Ux6h89COSHRXbqP+Igpnz4wR0no7Ag6i9F4hA+Gq//soMbIJ148IHqnXsQcaN\nwWHZ8Lu9QQKBgHuC7Pzi7K+ETDtGhkW38maTV0rAhZafuC27SJo7JUyK5FBlsPkH\nK/ha0saabzTRymBaE3BfgOcjxKySySIdqYAlym2ib/zl8yny1fHvgy/gSr3SGe1/\nUy7bUTeiM+uKCD3LNJyk63vhRuURf5o8vaNvLGrjNTAj+ZqmRDmLj7JBAoGBAKiY\n1RLmEDaXEWcQgRJRs3FK/JywxS89uAU11bo8NxBcA00951Ts5gJXiHIln5hl+j/q\n+IJncdMmy9uR/PJVO1Ada7PdT+ozMl/73Y7qIO/IBBrptIjw8C9FpDn1nJYLP0Wx\nA42hCqrq1RlKOzSTYdC3G979OponI/jjHTkdu1fBAoGAR1wCEqoCLkAQQMYiOufm\ndBhorfJT83yxDmIPOgNWmBs/8eBUhRwO8nll6uXRFXmX8QEBB8IDLyB3mFZ1S3e/\nQpEElb3FJBXMnA94I90thLeatB7v9wpeRiwRoBkLV8wjMxp6Hf1ba02s0A39TvkS\nZG59Lr3UTt2VuTlkMduIYBk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "hatim-sawai@nice-theory-268007.iam.gserviceaccount.com",
+  "client_id": "113345098003223335749",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hatim-sawai%40nice-theory-268007.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
